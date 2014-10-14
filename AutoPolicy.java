@@ -1,7 +1,7 @@
 /*
- * Simple program that returns whether an auto policy is in a no-fault state
- * Demonstrates Strings in a switch
- * From "Java How To Program, 10/e, Early Objects" - Chapter 5
+ * Simple program that returns whether an auto policy is in a no-fault state.
+ * Demonstrates Strings in a switch.
+ * From "Java How To Program, 10/e, Early Objects" - Chapter 5.
  */
 
 public class AutoPolicy {
