@@ -10,52 +10,42 @@ public class AutoPolicy {
       private String makeAndModel; // car that the policy applies to
       private String state; // two-letter state abbreviation
  
-      // constructor
-      public AutoPolicy(int newAccountNumber, String newMakeAndModel, String newState) {
+      //Constructor
+      public AutoPolicy(int newAccountNumber, String newMakeAndModel, 
+              String newState) {
          this.accountNumber = newAccountNumber;
          this.makeAndModel = newMakeAndModel;
          this.state = newState;
-      }
+      } //End constructor
  
-      // sets the accountNumber
-      public void setAccountNumber(int newAccountNumber)
-      {
+      //Getters and Setters
+      public void setAccountNumber(int newAccountNumber) {
          this.accountNumber = newAccountNumber;
-      }
+      } //End setAccountNumber
  
-      // returns the accountNumber
-      public int getAccountNumber()
-      {
+      public int getAccountNumber() {
          return this.accountNumber;
-      }
+      } //End getAcccountNumber
  
-      // sets the makeAndModel
-      public void setMakeAndModel(String newMakeAndModel)
-      {
+      public void setMakeAndModel(String newMakeAndModel) {
          this.makeAndModel = newMakeAndModel;
-      }
+      } //End setMakeAndModel
  
-      // returns the makeAndModel
-      public String getMakeAndModel()
-      {
+      public String getMakeAndModel() {
          return this.makeAndModel;
-      }
+      } //End getMakeAndModel
  
-      // sets the state
-      public void setState(String newState)
-      {
+      public void setState(String newState) {
          this.state = newState;
-      }
+      } //End setState
  
-      // returns the state
-      public String getState()
-      {
+      public String getState() {
          return this.state;
-      }
+      } //End getState
  
+      
       //Predicate method returns whether the state has no-fault insurance
-      public boolean isNoFaultState()
-      {
+      public boolean isNoFaultState() {
          boolean noFaultState;
  
          //Determine whether state has no-fault auto insurance           
@@ -70,8 +60,9 @@ public class AutoPolicy {
          }                                                                
  
          return noFaultState;
-      }//End isNoFaultState
+      } //End isNoFaultState
  
+      //Test method
       public static void main(String[] args) {
 
          AutoPolicy policy1 = new AutoPolicy(11111111, "Toyota Camry", "NJ");
@@ -80,16 +71,15 @@ public class AutoPolicy {
          //Is the policy in a no-fault state
          policyInNoFaultState(policy1);
          policyInNoFaultState(policy2);
-      }//End main
+      } //End main
  
       //Displays whether an AutoPolic is in a state with no-fault auto insurance
-      public static void policyInNoFaultState(AutoPolicy policy)
-      {
+      public static void policyInNoFaultState(AutoPolicy policy) {
          System.out.println("The auto policy:");
          System.out.printf(
             "Account #: %d; Car: %s; State %s %s a no-fault state%n%n",
             policy.getAccountNumber(), policy.getMakeAndModel(), policy.getState(),
-            (policy.isNoFaultState() ? "is": "is not"));
-    }//End policyInNoFaultState
+            (policy.isNoFaultState() ? "is" : "is not"));
+    } //End policyInNoFaultState
     
-}//End class AutoPolicy
+} //End class AutoPolicy
